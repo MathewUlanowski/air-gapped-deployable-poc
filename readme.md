@@ -5,7 +5,7 @@ This repository provides a **Docker Compose** setup containing:
 1. A **Squid proxy** container (with a configurable whitelist).  
 2. An **air-gapped container** that routes all outbound traffic through the Squid proxy.  
 
-The **air-gapped** container can only reach domains explicitly whitelisted in the Squid config. This is useful for scenarios such as AI model downloads (GitHub, PyPI) while preventing general internet access.
+The **air-gapped** container can only reach domains explicitly whitelisted in the Squid config. This is useful for a variety of scenarios.
 
 ---
 
