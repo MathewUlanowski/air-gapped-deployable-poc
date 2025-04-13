@@ -1,3 +1,15 @@
+
+# GitHub domains (if you need them)
 .github.com
 .githubusercontent.com
+
+# PyPI
+.pypi.org
+.pythonhosted.org
+.pypi.python.org
+
+# (Optional) Legacy domain
+.pypi.python.org
+
+# hugging face endpoints
 .huggingface.co

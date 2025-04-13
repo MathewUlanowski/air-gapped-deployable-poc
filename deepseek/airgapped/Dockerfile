@@ -15,11 +15,14 @@ RUN apt-get update && \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
+# Create a symbolic link so 'py' calls 'python3'
+RUN ln -s /usr/bin/python3 /usr/bin/py
+
 # Optionally, set up any config pointing to the proxy 
 # (though you might prefer to do this in the docker-compose.yml via environment variables).
 # For example:
-    RUN git config --global https.proxy http://github-proxy:3128
-    RUN git config --global http.proxy http://github-proxy:3128
+RUN git config --global https.proxy http://github-proxy:3128
+RUN git config --global http.proxy http://github-proxy:3128
     
 
 WORKDIR /opt
