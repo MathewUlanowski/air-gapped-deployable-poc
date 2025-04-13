@@ -1,0 +1,38 @@
+version: "3.8"
+
+# Define a strictly internal network. 
+# Containers attached to this network can't reach the outside world directly.
+networks:
+  internal_net:
+    internal: true
+
+services:
+  #############################
+  # Proxy Container
+  #############################
+  proxy:
+    build: ./proxy/
+    container_name: github-proxy
+    ports:
+      - "3128:3128"
+    networks:
+      - default
+      - internal_net
+
+  #############################
+  # Air-Gapped Container
+  #############################
+  airgapped_deepseek:
+    build:
+      context: ./airgapped/
+      dockerfile: Dockerfile
+    container_name: airgapped
+    tty: true
+    stdin_open: true
+    networks:
+      - internal_net
+    # If you want to set environment variables that instruct Git to use the proxy,
+    # you might do it here. For example (hypothetical HTTPS_PROXY):
+    # environment:
+    #   HTTPS_PROXY: "http://proxy:8080"
+    #   # or if you're doing an SSH-based clone, you'd need a SOCKS proxy approach, etc.
