@@ -15,6 +15,8 @@ The **air-gapped** container can only reach domains explicitly whitelisted in th
 2. [Prerequisites](#prerequisites)  
 3. [Setup and Usage](#setup-and-usage)
 4. [Configuration](#Configuration)
+    * [Editing the whitelist of allowed sites](#editing-the-whitelist-of-allowed-sites)
+    * [Verifying Access](#verifying-access)
 
 ---
 
