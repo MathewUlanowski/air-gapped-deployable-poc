@@ -22,7 +22,7 @@ services:
   #############################
   # Air-Gapped Container
   #############################
-  airgapped_deepseek:
+  airgapped_server:
     environment:
       HTTP_PROXY: http://proxy:3128
       HTTPS_PROXY: http://proxy:3128
