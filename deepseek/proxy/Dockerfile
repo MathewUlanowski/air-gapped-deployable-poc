@@ -11,7 +11,7 @@ RUN apt-get update && \
 
 # Copy in our custom Squid config
 COPY squid.conf /etc/squid/squid.conf
-COPY whitelist.txt /etc/squid/whitelist.txt
+COPY allowed_sites.txt /etc/squid/allowed_sites.txt
 
 # Expose whatever port Squid is listening on (e.g., 3128 or 8443)
 EXPOSE 3128
