@@ -83,6 +83,7 @@ pip install flask
 git clone https://github.com/your-org/your-repo.git
 ```
 
+--- 
 ## Configuration
 ### Editing the whitelist of allowed sites
 1. Locate the white list file by default it should be at `./proxy/allowed_sites.txt`.
